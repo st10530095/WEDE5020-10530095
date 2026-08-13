@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Crust Bakery | Enquiry</title>
+  <meta name="description" content="Submit an enquiry for custom cakes, catering, or bulk orders at Golden Crust Bakery.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== Header & Navigation ===================== -->
+  <header>
+    <div class="logo">
+      <img src="c:\Users\phili\Downloads\pexels-salah-ozil-78566588-18140495.jpg" alt="Golden Crust Bakery logo">
+      <span>Golden Crust Bakery</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== Page Heading ===================== -->
+    <section class="page-heading">
+      <h1>Make an Enquiry</h1>
+      <p>Planning a celebration or need a custom order? Fill in the form below and we'll get back to you.</p>
+    </section>
+
+    <!-- ===================== Enquiry Form ===================== -->
+    <!-- Note: form is static HTML for now (Part 1). Submission handling and
+         validation via JavaScript will be added in Part 3 of this project. -->
+    <section class="enquiry-form">
+      <form action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="enquiry-type">Enquiry Type</label>
+        <select id="enquiry-type" name="enquiry-type">
+          <option value="custom-cake">Custom Cake</option>
+          <option value="catering">Catering / Bulk Order</option>
+          <option value="general">General Enquiry</option>
+        </select>
+
+        <label for="event-date">Event Date (if applicable)</label>
+        <input type="date" id="event-date" name="event-date">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="cta-button">Submit Enquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer>
+    <p>&copy; 2026 Golden Crust Bakery. All rights reserved.</p>
+    <p>Durban, South Africa</p>
+  </footer>
+
+</body>
+</html>
