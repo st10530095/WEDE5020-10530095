@@ -68,18 +68,6 @@ created and linked to all five HTML pages. Key work completed:
 Screenshots of the website at desktop, tablet, and mobile widths, taken using
 browser developer tools:
 
-**Desktop (1280px):**
-*(Insert screenshot here)*
-
-**Tablet (768px):**
-*(Insert screenshot here)*
-
-**Mobile (375px):**
-*(Insert screenshot here)*
-
-## Sitemap
-See `sitemap.png` in this repository for the visual sitemap.
-
 ```
 Homepage (index.html)
 ├── About Us (about.html)
