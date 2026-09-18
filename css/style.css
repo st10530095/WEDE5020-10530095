@@ -1,0 +1,492 @@
+/* ============================================================
+   Golden Crust Bakery — style.css
+   Part 2: CSS Styling and Responsive Design
+   ============================================================ */
+
+/* ---------- 2.2 CSS Reset / Base Style ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 1rem = 16px, base for rem units */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Lato', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3a2a1a;
+  background-color: #fffaf3;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- 2.3 Typography ---------- */
+h1, h2, h3 {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #5a3e1b;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.85rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Colour Palette (variables for consistency) ---------- */
+:root {
+  --cream: #fffaf3;
+  --warm-cream: #f7ecd9;
+  --gold: #f2c879;
+  --brown: #5a3e1b;
+  --dark-brown: #3a2a1a;
+  --soft-pink-accent: #e8b4a0;
+}
+
+/* ---------- 2.4 Layout Structure: Header & Navigation (Flexbox) ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--warm-cream);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+header .logo img {
+  width: 50px;
+  height: auto;
+}
+
+header .logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--brown);
+}
+
+header nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav a {
+  font-weight: 600;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+header nav a:hover,
+header nav a:focus {
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
+
+header nav a[aria-current="page"] {
+  border-bottom: 2px solid var(--brown);
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  filter: brightness(0.65);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 90%;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Buttons ---------- */
+.cta-button {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--dark-brown);
+  font-weight: 700;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: var(--brown);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Intro / General Sections ---------- */
+.intro,
+.page-heading,
+.about-history,
+.mission-vision,
+.team,
+.product-category,
+.enquiry-form,
+.locations,
+.contact-form {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.page-heading {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+/* ---------- 2.4 Product / Team Grid Layout (CSS Grid) ---------- */
+.product-grid,
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.team-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.product-card,
+.team-member {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover,
+.team-member:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img,
+.team-member img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card h3,
+.product-card p,
+.team-member h3,
+.team-member p {
+  padding: 0 1rem;
+}
+
+.product-card h3,
+.team-member h3 {
+  margin-top: 1rem;
+}
+
+.product-card p:last-child,
+.team-member p:last-child {
+  padding-bottom: 1rem;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--brown);
+}
+
+/* ---------- Featured Products (Homepage) ---------- */
+.featured-products {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.featured-products .product-grid {
+  text-align: left;
+}
+
+/* ---------- Call To Action Banner ---------- */
+.cta-banner {
+  background-color: var(--warm-cream);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+/* ---------- About Page: History (Flexbox) ---------- */
+.about-history {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-history img {
+  flex: 1 1 350px;
+  width: 100%;
+  max-width: 450px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.about-history div {
+  flex: 1 1 350px;
+}
+
+/* ---------- Mission & Vision (Grid) ---------- */
+.mission-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mission,
+.vision {
+  background-color: var(--warm-cream);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* ---------- Enquiry / Contact Forms ---------- */
+.enquiry-form form,
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin-top: 1.5rem;
+}
+
+.enquiry-form label,
+.contact-form label {
+  font-weight: 600;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea,
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #d8c9b3;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(242, 200, 121, 0.35);
+}
+
+.enquiry-form button,
+.contact-form button {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- Contact Page: Locations (Grid) ---------- */
+.locations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.location {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.map-placeholder {
+  margin-top: 1rem;
+  height: 180px;
+  background-color: var(--warm-cream);
+  border: 1px dashed #c9b490;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a6d4a;
+  font-style: italic;
+}
+
+.map-container {
+  margin-top: 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 220px;
+  border: 0;
+  display: block;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--dark-brown);
+  color: #f2e6d3;
+}
+
+footer p {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   3. Responsive Design
+   ============================================================ */
+
+/* ---------- 3.1 Tablet Breakpoint (max-width: 900px) ---------- */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mission-vision,
+  .locations {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------- 3.1 Mobile Breakpoint (max-width: 600px) ---------- */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .hero img {
+    height: 45vh;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .product-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-history {
+    flex-direction: column;
+  }
+
+  .intro,
+  .page-heading,
+  .about-history,
+  .mission-vision,
+  .team,
+  .product-category,
+  .enquiry-form,
+  .locations,
+  .contact-form,
+  .featured-products {
+    padding: 2rem 1.25rem;
+  }
+}
