@@ -1,7 +1,7 @@
 # Golden Crust Bakery Website
 
-**Live website:** https://golden-crust-bakery-durban.netlify.app *(deployed on Netlify, see [Deployment](#deployment))*
-**Repository:** https://github.com/st10530095/WEDE5020-10530095 *(private)*
+**Live website:** 
+**Repository:** https://github.com/st10530095/WEDE5020-10530095 
 
 ## Student Information
 - **Name:** Lethiwe Zekhethelo Zuma
