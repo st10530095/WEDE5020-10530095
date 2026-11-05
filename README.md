@@ -27,6 +27,7 @@ CSS styling (Part 2), and JavaScript functionality and SEO (Part 3).
 - About Us page with history, mission, vision, an interactive "Our Journey" timeline (tabs) and the team.
 - Products page that loads the product list with JavaScript, with search, category filters, sorting and a product details pop-up.
 - Enquiry page with a validated form that returns an instant cost estimate and availability check, plus an FAQ accordion.
+- https://app.netlify.com/teams/st10530095/projects
 - Contact page with two locations on an interactive map, and a validated form that compiles the message into an email.
 - Search engine optimisation (SEO), security headers, accessibility features and fast loading.
 - A layout designed for mobile, tablet, desktop and large screens, with photos that adapt to each.
