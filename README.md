@@ -1,6 +1,6 @@
 # Golden Crust Bakery Website
 
-**Live website:** 
+**Live website:** https://app.netlify.com/teams/st10530095/projects
 **Repository:** https://github.com/st10530095/WEDE5020-10530095 
 
 ## Student Information
@@ -528,6 +528,7 @@ The logo (`golden-crust-bakery-logo.png`) and the "photo coming soon" tiles were
 - Netlify, n.d. – *Deploy sites and custom headers documentation*, Netlify, available at: https://docs.netlify.com/ [Accessed 29 October 2026].
 - Eat Out, n.d. – *Get the best cakes in Durban*, Eat Out, available at: https://eatout.co.za/article/get-best-cakes-durban/ [Accessed 29 October 2026]. Used for keyword research and price benchmarks.
 - Deque Systems, n.d. – *axe-core accessibility testing engine*, available at: https://github.com/dequelabs/axe-core [Accessed 29 October 2026]. Microsoft, n.d. – *Playwright*, available at: https://playwright.dev/ [Accessed 29 October 2026]. HTML-validate, n.d. – available at: https://html-validate.org/ [Accessed 29 October 2026]. Testing tools.
+- NETLIFY LINK: https://app.netlify.com/teams/st10530095/projects
 
 ### Reference List (Parts 1 and 2)
 
@@ -544,4 +545,5 @@ McCormick, K., 2021 – *The 25 Best Ways to Increase Your Online Presence*, Wor
 Neil Patel, 2021 – *7 Ways to Measure Your Website's UX*, NeilPatel.com, available at: https://neilpatel.com/blog/measure-website-ux/ [Accessed 13 August 2026].
 
 ITonlinelearning, 2023 – *HTML, CSS, and JavaScript: Essential Front-End Languages Explained*, ITonlinelearning, available at: https://www.itonlinelearning.com/blog/html-css-and-javascript-essential-front-end-languages-explained/ [Accessed 13 August 2026].
+NETLIFY LINK: https://app.netlify.com/teams/st10530095/projects
 
